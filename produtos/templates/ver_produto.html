@@ -1,0 +1,26 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+    <title>Padaria da Maria</title>
+    <meta charset='UTF-8'>
+    <meta name="viewport" content="width=divice-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'produtos/css/ver_produto.css' %}">
+</head>
+<body>
+    <h1>Padaria Pão Macio</h1>
+    <img src="{% static 'produtos/img/OIP.jpg' %}">
+
+<form action="{% url 'ver_produto' %}" method="POST">{% csrf_token %}
+<input type= "text" name= "nome" placeholder="Digite seu nome">
+<br>
+<br>
+<input type= "number" name= "idade" placeholder="Digite seu idade">
+<br>
+<br>
+<input type="submit" value="Enviar"> 
+</form>
+
+</body>
+</html>
+
